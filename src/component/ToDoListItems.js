@@ -1,19 +1,22 @@
-import react from 'react';
-import './style.css';
+import React, { useState } from 'react';
+import './ToDoListItems.css';
 
 const ToDoListComponent = props => {
   const [count, setCount] = useState(0);
+
   return (
-    <div className="innerListContainer">
-      <div className="indivualTask">
-        {
-          (list.map(),
-          //map all the values from what the userput
-          list[count])
-        }
-        <div className="removeTask">
-          <h1>X</h1>
-        </div>
+    <div className="inner-list-container">
+      <div>
+        {props.toDoList.map((taskName, index) => {
+          return (
+            <div className="individual-task">
+              {index + 1}. {taskName}
+              <button className="remove-task">
+                <span>+</span>
+              </button>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

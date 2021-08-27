@@ -1,0 +1,22 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.individual-task {
+  color: black;
+  flex-direction: inherit;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.remove-task {
+  border: none;
+  background: none;
+}
+
+.remove-task span {
+  display: inline-block;
+  transform: rotateZ(45deg);
+  font-size: 26px;
+}

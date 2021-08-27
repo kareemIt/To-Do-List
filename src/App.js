@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './style.css';
 import ToDoListComponent from './component/ToDoListItems';
+import './style.css';
 
 export default function App() {
   const [userInput, setUserInput] = useState('');
@@ -12,7 +12,9 @@ export default function App() {
   return (
     <div className="container">
       <h1>To Do List</h1>
-      <div className="toDoList">{/* add comp here later  */}</div>
+      <div className="to-do-list">
+        <ToDoListComponent toDoList={toDo} />
+      </div>
       <div className="inputInfoContainer">
         <h1>write stuff here</h1>
         <input
