@@ -12,7 +12,7 @@ const toDolistComponent = () => {
       <div className="indivualTask">
         {list.map()
         //map all the values from what the userput
-        }
+        ,list[count]}
         <div className="removeTask">
           <h1>X</h1>
         </div>
