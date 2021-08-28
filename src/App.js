@@ -5,6 +5,7 @@ import './style.css';
 export default function App() {
   const [userInput, setUserInput] = useState('');
   const [toDo, setToDo] = useState([]);
+
   function SubmitInfo() {
     setToDo(toDo.concat(userInput));
   }
