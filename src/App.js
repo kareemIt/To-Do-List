@@ -20,7 +20,7 @@ export default function App() {
         <ToDoListComponent toDoList={toDo} setToDo={setToDo} />
       </div>
       <div className="inputInfoContainer">
-        <h1>write stuff here</h1>
+        <h1>Input Tasks</h1>
         <input
           value={userInput}
           type="text"
