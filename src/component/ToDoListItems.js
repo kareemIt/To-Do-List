@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import './ToDoListItems.css';
 
 const ToDoListComponent = props => {
-  const [item, setItem] = useState([]);
-
   function onRemove(index) {
-    toDoList.filter(e, index => {});
+    props.setToDo(
+      props.toDoList.filter((_, i) => {
+        return index != i;
+      })
+    );
   }
 
   return (
@@ -13,9 +15,9 @@ const ToDoListComponent = props => {
       <div>
         {props.toDoList.map((taskName, index) => {
           return (
-            <div className="individual-task">
+            <div className="individual-task" key={index}>
               {index + 1}. {taskName}
-              <button className="remove-task" onClick={onRemove}>
+              <button className="remove-task" onClick={() => onRemove(index)}>
                 <span>+</span>
               </button>
             </div>

@@ -7,18 +7,22 @@ export default function App() {
   const [toDo, setToDo] = useState([]);
 
   function SubmitInfo() {
-    setToDo(toDo.concat(userInput));
+    if (userInput != '') {
+      setToDo(toDo.concat(userInput));
+      setUserInput('');
+    }
   }
 
   return (
     <div className="container">
       <h1>To Do List</h1>
       <div className="to-do-list">
-        <ToDoListComponent toDoList={toDo} />
+        <ToDoListComponent toDoList={toDo} setToDo={setToDo} />
       </div>
       <div className="inputInfoContainer">
         <h1>write stuff here</h1>
         <input
+          value={userInput}
           type="text"
           onChange={e => {
             setUserInput(e.target.value);
