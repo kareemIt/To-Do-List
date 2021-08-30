@@ -15,6 +15,10 @@
   background: none;
 }
 
+.remove-task:hover {
+  color: red;
+}
+
 .remove-task span {
   display: inline-block;
   transform: rotateZ(45deg);
